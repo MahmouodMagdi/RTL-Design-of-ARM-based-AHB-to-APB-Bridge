@@ -83,7 +83,7 @@ initial begin
 
     #(CLK_PER * 20) H_RESET_n_tb = 'b1;
 
-        for (int i = 0; i < 30; i++ ) begin
+    for (int i = 0; i < 30; i++ ) begin
         H_WRITE_tb    = $random;
         H_SEL_APB_tb  = $random;
         H_READY_IN_tb = $random;
