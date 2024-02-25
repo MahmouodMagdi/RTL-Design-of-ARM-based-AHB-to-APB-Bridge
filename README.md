@@ -23,3 +23,9 @@ AMBA AHB implements the features required for high-performance, high clock frequ
   • Wide data bus configurations, 64, 128, 256, 512, and 1024 bits.
   
 The most common AHB slaves are internal memory devices, external memory interfaces, and high-bandwidth peripherals. Although low-bandwidth peripherals can be included as AHB slaves, for system performance reasons, they typically reside on the AMBA Advanced Peripheral Bus (APB). Bridging between the higher performance AHB and APB is done using an AHB slave, known as an APB bridge.
+
+![image](https://github.com/MahmouodMagdi/RTL-Design-of-ARM-based-AHB-to-APB-Bridge/assets/72949261/d1650a6e-1afa-408c-a8e9-507cddb409cd)
+
+The figure above shows a single master AHB system design with the AHB master and three AHB slaves. The bus interconnect logic consists of one address decoder and a slave-to-master multiplexor. The decoder monitors the address from the master so that the appropriate slave is selected and the multiplexor routes the corresponding slave output data back to the master. AHB also supports multimaster designs by the use of an interconnect component that provides arbitration and routing signals from different masters to the appropriate slaves.
+
+
