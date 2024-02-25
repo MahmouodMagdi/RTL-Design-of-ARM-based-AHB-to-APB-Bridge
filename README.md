@@ -26,6 +26,15 @@ The most common AHB slaves are internal memory devices, external memory interfac
 
 ![image](https://github.com/MahmouodMagdi/RTL-Design-of-ARM-based-AHB-to-APB-Bridge/assets/72949261/d1650a6e-1afa-408c-a8e9-507cddb409cd)
 
-The figure above shows a single master AHB system design with the AHB master and three AHB slaves. The bus interconnect logic consists of one address decoder and a slave-to-master multiplexor. The decoder monitors the address from the master so that the appropriate slave is selected and the multiplexor routes the corresponding slave output data back to the master. AHB also supports multimaster designs by the use of an interconnect component that provides arbitration and routing signals from different masters to the appropriate slaves.
+The figure above shows a single master AHB system design with the AHB master and three AHB slaves. The bus interconnect logic consists of one address decoder and a slave-to-master multiplexor. The decoder monitors the address from the master so that the appropriate slave is selected and the multiplexor routes the corresponding slave output data back to the master. AHB also supports multi-master designs by the use of an interconnect component that provides arbitration and routing signals from different masters to the appropriate slaves.
 
 
+## 3. APB (Advanced Peripheral Bus) :
+
+The Advanced Peripheral Bus (APB) is part of the Advanced Microcontroller Bus Architecture (AMBA) protocol family. It defines a low-cost interface that is optimized for minimal power consumption and reduced interface complexity.The APB protocol is not pipelined, use it to connect to low-bandwidth peripherals that do not require the high performance of the AXI protocol. The APB protocol relates a signal transition to the rising edge of the clock, to simplify the integration of APB peripherals into any design flow. Every transfer takes at least two cycles.
+The APB can interface with:
+• AMBA Advanced High-performance Bus (AHB)
+• AMBA Advanced High-performance Bus Lite (AHB-Lite)
+• AMBA Advanced Extensible Interface (AXI)
+• AMBA Advanced Extensible Interface Lite (AXI4-Lite)
+You can use it to access the programmable control registers of peripheral devices.
